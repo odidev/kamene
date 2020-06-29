@@ -6,7 +6,12 @@ python:
   - 3.6
 
 sudo: required
-
+matrix:
+  include:
+    - arch: arm64
+      python: 3.6
+      env: PIP_NO_CACHE_DIR=off 
+    
 install:
   - pip install cryptography
 
