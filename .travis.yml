@@ -16,6 +16,6 @@ install:
   - pip install cryptography
 
 script:
-  - pip install -e .
+  - python setup.py install
   - cd test
   - sudo ./run_tests
